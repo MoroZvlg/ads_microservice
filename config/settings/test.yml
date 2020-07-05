@@ -1,0 +1,6 @@
+db:
+  database: ads_microservice_test
+  host: localhost
+  port: 5432
+  adapter: postgresql
+  user: postgres

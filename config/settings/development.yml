@@ -1,0 +1,9 @@
+db:
+  database: ads_microservice_dev
+  host: localhost
+  port: 5432
+  adapter: postgresql
+  user: postgres
+
+pagination:
+  per_page: 10

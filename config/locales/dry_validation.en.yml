@@ -1,0 +1,10 @@
+en:
+  dry_validation:
+    errors:
+      rules:
+        city:
+          filled?: 'Fill the City field'
+        title:
+          filled?: 'Fill the Title field'
+        description:
+          filled?: 'Fill the Description field'

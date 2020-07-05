@@ -1,0 +1,10 @@
+ru:
+  dry_validation:
+    errors:
+      rules:
+        city:
+          filled?: 'Заполните поле Город'
+        title:
+          filled?: 'Заполните поле Заголовок'
+        description:
+          filled?: 'Заполните поле Описание'

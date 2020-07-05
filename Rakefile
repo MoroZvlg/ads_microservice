@@ -1,4 +1,3 @@
+ENV['RACK_ENV'] ||= 'development'
 
-require_relative './config/environment'
-
-Dir.glob('lib/tasks/*.rake').each { |r| load r}
+Rake.add_rakelib("rakelib/**")

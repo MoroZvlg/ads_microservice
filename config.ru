@@ -1,6 +1,9 @@
 require_relative './config/environment'
 
-InitMicroApp.load_app
+ApplicationLoader.load_app!
 
-run MicroApplication
+map '/ads' do
+  run AdRoutes
+end
+
 

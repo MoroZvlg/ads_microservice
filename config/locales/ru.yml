@@ -1,0 +1,11 @@
+ru:
+  contracts:
+    wrong_email_format: Неверный формат email
+    wrong_name_format: Укажите имя, используя буквы, цифры или символ подчёркивания
+    passwords_not_match: Пароли не совпадают
+  api:
+    errors:
+      is_missing: Параметр отсутствует
+      not_found: Запись не найдена
+      not_unique: Такая запись уже существует
+      missing_parameters: Отсутствует параметр

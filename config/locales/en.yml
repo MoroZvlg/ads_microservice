@@ -1,0 +1,11 @@
+en:
+  contracts:
+    wrong_email_format: Wrong email format
+    wrong_name_format: User letters, numbers or underscore for name
+    passwords_not_match: Passwords don't match
+  api:
+    errors:
+      is_missing: Parameter missing
+      not_found: Record not found
+      not_unique: Record not unique
+      missing_parameters: Parameter missing
