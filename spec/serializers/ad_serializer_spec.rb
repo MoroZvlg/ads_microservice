@@ -23,8 +23,6 @@ RSpec.describe AdSerializer do
   end
 
   it 'returns ad representation' do
-    pp ad.values
-    pp attributes
     expect(subject.serializable_hash).to a_hash_including(
                                              data: [
                                                  {

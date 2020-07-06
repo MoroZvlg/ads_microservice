@@ -22,6 +22,9 @@ gem 'activesupport', require: false
 gem 'dry-initializer'
 gem 'dry-validation'
 
+gem 'faraday'
+gem 'faraday_middleware'
+
 group :test do
   gem 'rspec'
   gem 'factory_bot'
