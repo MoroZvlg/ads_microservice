@@ -31,6 +31,7 @@ module ApplicationLoader
 
   def require_lib
     require_dir 'lib/'
+    require_dir 'app/lib/'
   end
 
   def require_app

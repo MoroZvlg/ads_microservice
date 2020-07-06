@@ -9,3 +9,4 @@ ru:
       not_found: Запись не найдена
       not_unique: Такая запись уже существует
       missing_parameters: Отсутствует параметр
+      unauthorized: Доступ к ресурсу ограничен

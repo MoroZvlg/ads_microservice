@@ -19,6 +19,11 @@ module ApiErrors
   private
 
 
+  error AuthService::Exceptions::AuthException do
+    status 403
+    error_response(I18n.t(:unauthorized, scope: 'api.errors'))
+  end
+
   error Sequel::NoMatchingRow do
     status 404
     error_response(I18n.t(:not_found, scope: 'api.errors'))

@@ -9,3 +9,4 @@ en:
       not_found: Record not found
       not_unique: Record not unique
       missing_parameters: Parameter missing
+      unauthorized: Forbidden
