@@ -16,10 +16,13 @@ RSpec.describe AdRoutes, type: :request do
     let(:user_id) { 101 }
     let(:auth_token) { "auth.token" }
     let(:auth_client) { instance_double("Auth Client") }
+    let(:geo_client) { instance_double("Geo Client") }
 
     before do
       allow(auth_client).to receive(:auth).and_return(user_id)
+      allow(geo_client).to receive(:geocode).with(String).and_raise(GeoService::Exceptions::GeoException)
       allow(AuthService::Client).to receive(:new).with(token: auth_token).and_return(auth_client)
+      allow(GeoService::Client).to receive(:new).and_return(geo_client)
       header "Authorization", "Bearer #{auth_token}"
     end
 

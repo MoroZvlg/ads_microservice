@@ -15,12 +15,22 @@ module Ads
     def call
       @ad = ::Ad.new(@ad.to_h)
       @ad.user_id = user_id
+      fetch_coordinates
 
       if @ad.valid?
         @ad.save
       else
         fail!(@ad.errors)
       end
+    end
+
+    def fetch_coordinates
+      client =  GeoService::Client.new
+      response = client.geocode(@ad.city)
+      @ad.lat = response['lat']
+      @ad.lon = response['lon']
+    rescue ::GeoService::Exceptions::GeoException => e
+      pp e.message
     end
   end
 end
