@@ -25,12 +25,17 @@ module Ads
     end
 
     def fetch_coordinates
-      client =  GeoService::Client.new
-      response = client.geocode(@ad.city)
+      response = geo_client.geocode(@ad.city, id: @ad.id)
       @ad.lat = response['lat']
       @ad.lon = response['lon']
     rescue ::GeoService::Exceptions::GeoException => e
       pp e.message
     end
+
+    def geo_client
+      # GeoService::Client.new
+      GeoRabbitService::Client.fetch
+    end
+
   end
 end

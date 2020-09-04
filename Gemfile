@@ -16,6 +16,8 @@ gem 'pg'
 gem 'i18n'
 gem 'config'
 
+gem 'bunny'
+
 gem 'fast_jsonapi'
 gem 'activesupport', require: false
 

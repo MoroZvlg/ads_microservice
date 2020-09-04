@@ -7,3 +7,5 @@ application:
   jwt_secure_code: random_key
 pagination:
   default_per_page: 25
+rabbit:
+  pool_size: 10
