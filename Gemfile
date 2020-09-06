@@ -18,6 +18,10 @@ gem 'config'
 
 gem 'bunny'
 
+gem 'rack-ougai'
+gem 'amazing_print' # нужен для ouagi!
+gem 'rack-request-id'
+
 gem 'fast_jsonapi'
 gem 'activesupport', require: false
 

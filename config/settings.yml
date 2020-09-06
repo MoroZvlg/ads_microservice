@@ -1,3 +1,5 @@
+app:
+  name: ads
 db:
   database: ads_microservice
   host: localhost
@@ -9,3 +11,6 @@ pagination:
   default_per_page: 25
 rabbit:
   pool_size: 10
+logger:
+  path: log/app.log
+  level: info

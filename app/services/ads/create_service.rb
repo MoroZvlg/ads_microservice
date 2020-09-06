@@ -33,8 +33,8 @@ module Ads
     end
 
     def geo_client
-      # GeoService::Client.new
-      GeoRabbitService::Client.fetch
+      # GeoRabbitService::Client.fetch
+      GeoService::Client.new
     end
 
   end

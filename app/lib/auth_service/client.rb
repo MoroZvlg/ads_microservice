@@ -16,6 +16,7 @@ module AuthService
       response = @connection.run_request method, "/auth/v1/#{path}", body, nil do |req|
         req.params.update params
         req.headers["Authorization"] = "Bearer #{@token}"
+        req.headers["X_REQUEST_ID"] = Thread.current[:request_id]
       end
       response.body
     end

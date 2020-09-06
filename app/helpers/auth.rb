@@ -2,14 +2,14 @@ module Auth
   AUTH_TOKEN = %r{\ABearer (?<token>.+)\z}
 
   def user_id
-    auth_client.auth(matched_token)
+    auth_client.auth
   end
 
   private
 
   def auth_client
-    # @auth_client ||= AuthService::Client.new(token: matched_token)
-    AuthRabbitService::Client.fetch
+    # AuthRabbitService::Client.fetch
+    @auth_client ||= AuthService::Client.new(token: matched_token)
   end
 
   def matched_token
