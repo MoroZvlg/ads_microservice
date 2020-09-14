@@ -3,7 +3,7 @@ namespace :db do
   task :migrate, [:version] => :settings do |t, args|
     require "sequel/core"
 
-    Sequel.connect(Settings.db.to_hash) do |db|
+    Sequel.connect(Settings.db.url || Settings.db.to_hash) do |db|
       Sequel.extension :migration
       version = args[:version].to_i if args[:version]
 

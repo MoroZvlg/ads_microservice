@@ -35,9 +35,11 @@ module ApplicationLoader
   end
 
   def require_app
+    require_file 'app/helpers/validations'
     require_dir 'app/helpers'
     require_file 'config/application'
     require_dir 'app/', pattern: "application*.rb"
+    require_file 'app/lib/geo_service/api'
     require_dir 'app/'
   end
 

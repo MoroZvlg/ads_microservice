@@ -5,6 +5,7 @@ db:
   host: localhost
   port: 5432
   adapter: postgresql
+  url: <%= ENV['ADS_DATABASE_URL'] %>
 application:
   jwt_secure_code: random_key
 pagination:

@@ -1,7 +1,7 @@
 class AdRoutes < Application
   helpers PaginationLinks, Auth
   namespace '/v1' do
-    get '/' do
+    get '' do
       page = params[:page].presence || 1
       ads = Ad.reverse_order(:updated_at)
       ads = ads.paginate(page.to_i, Settings.pagination.default_per_page)
@@ -12,7 +12,7 @@ class AdRoutes < Application
       json serializer.serializable_hash
     end
 
-    post '/' do
+    post '' do
       ad_params = validate_with!(PermitParams::NewAd)
 
       result = Ads::CreateService.call(ad: ad_params[:ad], user_id: user_id)

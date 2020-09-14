@@ -5,7 +5,7 @@ namespace :db do
     require 'sequel/extensions/seed'
     require_relative '../../config/environment.rb'
 
-    Sequel.connect(Settings.db.to_hash) do |db|
+    Sequel.connect(Settings.db.url || Settings.db.to_hash) do |db|
       Sequel.extension :seed
       Sequel::Seed.setup(ENV['RACK_ENV'].to_sym)
 
